@@ -74,7 +74,7 @@ function generatePassword () {
         window.alert("Password generated.");
       }
     }
-    
+
     //Declares final password outcome that will show up in the #password input
     var passwordFinal = "";
     for (var i = 0; i < passwordLength; i++) {
@@ -92,7 +92,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
