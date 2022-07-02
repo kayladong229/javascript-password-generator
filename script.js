@@ -17,7 +17,7 @@ function generatePassword () {
       askLowercase(); 
     } else {
       //The user starts the password generating process over if unfavorable password length is picked
-      window.alert("Please select a number between 8 and 128.");
+      window.alert("You must enter a number between 8 and 128.");
       generatePassword();
     }
 
