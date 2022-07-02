@@ -10,7 +10,7 @@ function generatePassword () {
   var specialChar = [' ', '&', '@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.', '>', '<'];
   //Created an array that will house the user's chosen character type arrays
   var chosenChars = [];
-  //Asks the user to select an appropriate password length
+  //The user is asked to select an appropriate password length
   passwordLength = prompt("Pick a number between 8 and 128. This determines the length of your password.");
     if (passwordLength >= 8 && passwordLength <= 128) {
       window.alert("You will now be presented a series of prompts regarding your preferred password criteria starting with lowercase letters.");
@@ -24,8 +24,8 @@ function generatePassword () {
     //Declares sub-functions for all character types
 
   function askLowercase () {
-    //Asks the user to say yes or no by clicking either OK or Cancel respectively
-    var answerLowercase = confirm("Do you wish to include lowercase letters in your password? (Y/N)");
+    //The user is asked to say yes or no by clicking either OK or Cancel respectively
+    var answerLowercase = confirm("Do you wish to include lowercase letters in your password?");
     if (answerLowercase) {
       //Concatenates chosenChars array with appropriate character type array if user clicks OK
       chosenChars = chosenChars.concat(lowercaseChar);
@@ -34,14 +34,14 @@ function generatePassword () {
       //And executes function regarding that next option
       askUppercase();
     } else {
-      //Skips concatenation if user clicks "Cancel"
+      //Skips concatenation if user clicks Cancel
       window.alert("Next, uppercase letters.");
       askUppercase();
     }
   } 
 
   function askUppercase () {
-    var answerUppercase = confirm("Do you wish to include uppercase letters in your password? (Y/N)");
+    var answerUppercase = confirm("Do you wish to include uppercase letters in your password?");
     if (answerUppercase) {
         chosenChars = chosenChars.concat(uppercaseChar);
         window.alert("Next, numbers.");
@@ -53,7 +53,7 @@ function generatePassword () {
     }
 
     function askNumbers () {
-      var answerNumbers = confirm("Do you wish to include numbers in your password? (Y/N)");
+      var answerNumbers = confirm("Do you wish to include numbers in your password?");
       if (answerNumbers) {
         chosenChars = chosenChars.concat(numbers);
         window.alert("Last, special characters.");
@@ -65,7 +65,7 @@ function generatePassword () {
     }
 
     function askSpecial () {
-      var answerSpecial = confirm("Do you wish to include special characters in your password? (Y/N)");
+      var answerSpecial = confirm("Do you wish to include special characters in your password?");
       if (answerSpecial) {
         chosenChars = chosenChars.concat(specialChar);
         //This is the last criteria option so the user is informed their password is ready after making their choice
@@ -74,12 +74,7 @@ function generatePassword () {
         window.alert("Password generated.");
       }
     }
-
-  // if (!confirmLowercase && !confirmUppercase && !confirmNumbers && !confirmSpecial) {
-  //   window.alert("You are required to choose at least one character type.");
-  //   generatePassword();
-  // }
-
+    
     //Declares final password outcome that will show up in the #password input
     var passwordFinal = "";
     for (var i = 0; i < passwordLength; i++) {
