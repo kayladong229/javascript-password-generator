@@ -13,7 +13,7 @@ function generatePassword () {
   //The user is asked to select an appropriate password length
   passwordLength = prompt("Pick a number between 8 and 128. This determines the length of your password.");
     if (passwordLength >= 8 && passwordLength <= 128) {
-      window.alert("You will now be presented a series of prompts regarding your preferred password criteria starting with lowercase letters.");
+      window.alert("You will now be presented a series of prompts regarding your preferred password criteria starting with lowercase letters.\n\nPlease note that if you do not add at least one criterion, the password input area will display an error.");
       askLowercase(); 
     } else {
       //The user starts the password generating process over if unfavorable password length is picked
