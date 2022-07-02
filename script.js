@@ -25,7 +25,7 @@ function generatePassword () {
 
   function askLowercase () {
     //The user is asked to say yes or no by clicking either OK or Cancel respectively
-    var answerLowercase = confirm("Do you wish to include lowercase letters in your password?");
+    var answerLowercase = confirm('Do you wish to include lowercase letters in your password? Click "OK" to add or click "Cancel" to omit.');
     if (answerLowercase) {
       //Concatenates chosenChars array with appropriate character type array if user clicks OK
       chosenChars = chosenChars.concat(lowercaseChar);
@@ -41,7 +41,7 @@ function generatePassword () {
   } 
 
   function askUppercase () {
-    var answerUppercase = confirm("Do you wish to include uppercase letters in your password?");
+    var answerUppercase = confirm('Do you wish to include uppercase letters in your password? Click "OK" to add or click "Cancel" to omit.');
     if (answerUppercase) {
         chosenChars = chosenChars.concat(uppercaseChar);
         window.alert("Next, numbers.");
@@ -53,7 +53,7 @@ function generatePassword () {
     }
 
     function askNumbers () {
-      var answerNumbers = confirm("Do you wish to include numbers in your password?");
+      var answerNumbers = confirm('Do you wish to include numbers in your password? Click "OK" to add or click "Cancel" to omit.');
       if (answerNumbers) {
         chosenChars = chosenChars.concat(numbers);
         window.alert("Last, special characters.");
@@ -65,7 +65,7 @@ function generatePassword () {
     }
 
     function askSpecial () {
-      var answerSpecial = confirm("Do you wish to include special characters in your password?");
+      var answerSpecial = confirm('Do you wish to include special characters in your password? Click "OK" to add or click "Cancel" to omit.');
       if (answerSpecial) {
         chosenChars = chosenChars.concat(specialChar);
         //This is the last criteria option so the user is informed their password is ready after making their choice
