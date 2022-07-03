@@ -6,7 +6,7 @@ function generatePassword () {
 //Declares all possible password characters through arrays
   var lowercaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   var uppercaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-  var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var numericChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   var specialChar = [' ', '&', '@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.', '>', '<'];
   //Created an array that will house the user's chosen character type arrays
   var chosenChars = [];
@@ -55,7 +55,7 @@ function generatePassword () {
     function askNumbers () {
       var answerNumbers = confirm('Do you wish to include numbers in your password? Click "OK" to add or click "Cancel" to omit.');
       if (answerNumbers) {
-        chosenChars = chosenChars.concat(numbers);
+        chosenChars = chosenChars.concat(numericChar);
         window.alert("Last, special characters.");
         askSpecial();
       } else {
@@ -69,9 +69,9 @@ function generatePassword () {
       if (answerSpecial) {
         chosenChars = chosenChars.concat(specialChar);
         //This is the last criteria option so the user is informed their password is ready after making their choice
-        window.alert("Password generated.");
+        window.alert("Your new password has been generated.");
       } else {
-        window.alert("Password generated.");
+        window.alert("Your new password has been generated.");
       }
     }
 
